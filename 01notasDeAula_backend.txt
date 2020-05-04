@@ -1,0 +1,59 @@
+1º Cria a pasta crud para ser o repositorio do backent,
+    então cria a pasta backend e nela começa a instalação com:
+    npm init -y 
+    // que cria o arquivo package.json (o -y serve pra responder yes pra tudo)
+
+2º instalar módulos node:
+    npm i json-server
+    // isso vai baixar os módulos do node para dentro do projeto 
+    // e escrever a dependencia no package.json
+
+3º Criar um arquivo vazio na pasta backend para ser o início do banco de dados
+    db.json
+    // dicas: 
+    alt+shift+seta = duplicar
+    alt+shift+F = formatar
+    alt seta = desce / sobe
+
+4º registrar um script "start" no package.json assim:
+      "scripts": {
+    "start": "json-server --watch db.json --port 3001"
+  },
+
+5º iniciar o projeto com o 
+    npm start
+
+    resultado no terminal:
+
+    PS C:\Users\HOME\source\repos\Angular9Cod3r\crud\backend> npm start
+
+> backend@1.0.0 start C:\Users\HOME\source\repos\Angular9Cod3r\crud\backend
+> json-server --watch db.json --port 3001
+
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:3001/products
+
+  Home
+  http://localhost:3001
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+5º Testando a API com GET e POST para a rota products fornecendo apenas name e price
+    o json-server insere o id automaticamente:
+    {
+        "name": "Geladeira",
+        "price": "1903.99",
+        "id": 4
+    }
+
+    lembretes: 
+    O Verbo PUT serve para alterar o elemento (tupla) inteiro apartir do seu id;
+    Já o Verbo PATCH, também através do id, pode alterar apenas um ou alguns atributos de um elemento (tupla).
+

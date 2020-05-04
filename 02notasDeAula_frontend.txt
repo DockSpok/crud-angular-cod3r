@@ -1,0 +1,50 @@
+1º Instalar via npm a cli do Angular:
+    npm i -g @angular/cli
+    i é para install 
+    -g é para ser global
+    Resultado:
+    + @angular/cli@9.1.1
+    added 272 packages from 207 contributors in 84.207s
+2º Criar o projeto via 
+    ng new frontend --minimal
+    frontend aqui é o nome que escolhi
+    --minimal para importar o mínimo possível de dependências
+    pode ser dado nome diferente ao aplicativo (o padrão é app)
+        para ter outro nome é só usar também --prefix meuappdoido
+        vai gerar o prefixo das tags do app fora do padrão: <meuappdoido-home> por exemplo.
+    Would you like to add Angular routing? = you
+    Perguntas se quer usar pré-processadores de estilo... usar CSS mesmo...
+    ? Which stylesheet format would you like to use? (Use arrow keys)
+        > CSS
+        SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
+        Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
+        Less   [ http://lesscss.org                                             ]
+        Stylus [ http://stylus-lang.com                                         ]
+
+Para testar caminhar até a pasta crud/frontend e executar npm start:
+    ** Angular Live Development Server is listening on localhost:4200, 
+    open your browser on http://localhost:4200/ **
+
+Para parar o servidor usar o comando ^C 
+
+3º o Angular fica disponível por padrão na porta 4200 do localhost
+    acessando http://localhost:4200/ vemos uma home de exemplo com a logo
+
+DICA: pode trabalhar com vários terminais no VS code... um no back ouro no front etc.
+
+4º Alterando angular.json:
+    passar inlineTemplate e inlineStyle para false // isso permite ter arquivos distintos
+        cada macaco no seu galho: css / html / tag
+        vem como true por causa do --minimal...
+
+Comentários seguintes feitos direto no código.
+
+5º As tags Template: `` e Style: não precisam estar no app.component.ts, só se for um template muito simples, 
+    nesse curso vamos usar a tag TemplateUrl
+
+6º Lembrete: Interpolação de valores no html por double mustache {{ variavel }}
+
+7º Adicionar Material: frontend> ng add @angular/material e escolher as opções...
+
+
+    
